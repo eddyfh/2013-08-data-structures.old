@@ -22,13 +22,13 @@ var extend = function(to, from) {
 thingy = {};
 
 thingy.push = function(value){
+    this._storage[this._size] = value;
     this._size++;
-    this.storage[this._size] = value;
   };
 
 thingy.pop = function(){
-    var results = this._storage[this._size];
     if (this._size > 0) this._size--;
+    var results = this._storage[this._size];
     return results;
   };
 
