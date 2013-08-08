@@ -8,13 +8,13 @@ var makeStack = function(){
   var stack = {};
 
   stack.push = function(value){
-    size++;
     storage[size] = value;
+    size++;
   };
 
   stack.pop = function(){
-    var results = storage[size];
     if (size > 0) size--;
+    var results = storage[size];
     return results;
   };
 
