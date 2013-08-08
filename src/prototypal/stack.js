@@ -3,16 +3,8 @@ var Stack = function() {
   var stackobj = Object.create(thingy);
   stackobj['_size'] = 0;
   stackobj['_storage'] = {};
-  extend(stackobj, thingy);
-
   return stackobj;
 
-};
-
-var extend = function(to, from) {
-    for (var key in from) {
-      to[key] = from[key];
-    }
 };
 
 thingy = {};
